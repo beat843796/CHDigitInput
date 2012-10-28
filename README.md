@@ -38,6 +38,10 @@ Create and configure the BubbleView in your ViewController
  	[digitInput redrawControl];
 ```
 
+## Notes
+- Uses ARC
+- Should only be used on iPhone/iPod Touch
+
 ## License
 Copyright 2012 Clemens Hammerl
 
