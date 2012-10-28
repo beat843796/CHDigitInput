@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABE56E8B163C77FA0068471B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE56E8A163C77FA0068471B /* UIKit.framework */; };
+		ABE56E8D163C77FA0068471B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE56E8C163C77FA0068471B /* Foundation.framework */; };
+		ABE56E8F163C77FA0068471B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE56E8E163C77FA0068471B /* CoreGraphics.framework */; };
+		ABE56E95163C77FA0068471B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ABE56E93163C77FA0068471B /* InfoPlist.strings */; };
+		ABE56E97163C77FA0068471B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE56E96163C77FA0068471B /* main.m */; };
+		ABE56E9B163C77FA0068471B /* CHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE56E9A163C77FA0068471B /* CHAppDelegate.m */; };
+		ABE56EA3163C780E0068471B /* CHTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE56EA2163C780E0068471B /* CHTestController.m */; };
+		ABE56EA7163C78730068471B /* CHDigitInput.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE56EA6163C78730068471B /* CHDigitInput.m */; };
+		ABF48723163CBFE100CCC6E7 /* digitControlBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF48721163CBFE100CCC6E7 /* digitControlBG@2x.png */; };
+		ABF48724163CBFE100CCC6E7 /* digitOverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF48722163CBFE100CCC6E7 /* digitOverlay@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ABE56E86163C77FA0068471B /* CHDigitInputControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHDigitInputControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE56E8A163C77FA0068471B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ABE56E8C163C77FA0068471B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ABE56E8E163C77FA0068471B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ABE56E92163C77FA0068471B /* CHDigitInputControl-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CHDigitInputControl-Info.plist"; sourceTree = "<group>"; };
+		ABE56E94163C77FA0068471B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ABE56E96163C77FA0068471B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ABE56E98163C77FA0068471B /* CHDigitInputControl-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CHDigitInputControl-Prefix.pch"; sourceTree = "<group>"; };
+		ABE56E99163C77FA0068471B /* CHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHAppDelegate.h; sourceTree = "<group>"; };
+		ABE56E9A163C77FA0068471B /* CHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHAppDelegate.m; sourceTree = "<group>"; };
+		ABE56EA1163C780E0068471B /* CHTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTestController.h; sourceTree = "<group>"; };
+		ABE56EA2163C780E0068471B /* CHTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTestController.m; sourceTree = "<group>"; };
+		ABE56EA5163C78730068471B /* CHDigitInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHDigitInput.h; sourceTree = "<group>"; };
+		ABE56EA6163C78730068471B /* CHDigitInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHDigitInput.m; sourceTree = "<group>"; };
+		ABF48721163CBFE100CCC6E7 /* digitControlBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "digitControlBG@2x.png"; sourceTree = "<group>"; };
+		ABF48722163CBFE100CCC6E7 /* digitOverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "digitOverlay@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABE56E83163C77FA0068471B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE56E8B163C77FA0068471B /* UIKit.framework in Frameworks */,
+				ABE56E8D163C77FA0068471B /* Foundation.framework in Frameworks */,
+				ABE56E8F163C77FA0068471B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABE56E7B163C77FA0068471B = {
+			isa = PBXGroup;
+			children = (
+				ABE56E90163C77FA0068471B /* CHDigitInputControl */,
+				ABE56E89163C77FA0068471B /* Frameworks */,
+				ABE56E87163C77FA0068471B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABE56E87163C77FA0068471B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABE56E86163C77FA0068471B /* CHDigitInputControl.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABE56E89163C77FA0068471B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABE56E8A163C77FA0068471B /* UIKit.framework */,
+				ABE56E8C163C77FA0068471B /* Foundation.framework */,
+				ABE56E8E163C77FA0068471B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABE56E90163C77FA0068471B /* CHDigitInputControl */ = {
+			isa = PBXGroup;
+			children = (
+				ABE56E99163C77FA0068471B /* CHAppDelegate.h */,
+				ABE56E9A163C77FA0068471B /* CHAppDelegate.m */,
+				ABF48726163CC70D00CCC6E7 /* Demo */,
+				ABE56EA4163C78600068471B /* DigitInputControl */,
+				ABE56E91163C77FA0068471B /* Supporting Files */,
+			);
+			path = CHDigitInputControl;
+			sourceTree = "<group>";
+		};
+		ABE56E91163C77FA0068471B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABE56E92163C77FA0068471B /* CHDigitInputControl-Info.plist */,
+				ABE56E93163C77FA0068471B /* InfoPlist.strings */,
+				ABE56E96163C77FA0068471B /* main.m */,
+				ABE56E98163C77FA0068471B /* CHDigitInputControl-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ABE56EA4163C78600068471B /* DigitInputControl */ = {
+			isa = PBXGroup;
+			children = (
+				ABE56EA5163C78730068471B /* CHDigitInput.h */,
+				ABE56EA6163C78730068471B /* CHDigitInput.m */,
+			);
+			name = DigitInputControl;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		ABF48726163CC70D00CCC6E7 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				ABE56EA1163C780E0068471B /* CHTestController.h */,
+				ABE56EA2163C780E0068471B /* CHTestController.m */,
+				ABF48721163CBFE100CCC6E7 /* digitControlBG@2x.png */,
+				ABF48722163CBFE100CCC6E7 /* digitOverlay@2x.png */,
+			);
+			name = Demo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABE56E85163C77FA0068471B /* CHDigitInputControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABE56E9E163C77FA0068471B /* Build configuration list for PBXNativeTarget "CHDigitInputControl" */;
+			buildPhases = (
+				ABE56E82163C77FA0068471B /* Sources */,
+				ABE56E83163C77FA0068471B /* Frameworks */,
+				ABE56E84163C77FA0068471B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CHDigitInputControl;
+			productName = CHDigitInputControl;
+			productReference = ABE56E86163C77FA0068471B /* CHDigitInputControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABE56E7D163C77FA0068471B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CH;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Clemens Hammerl";
+			};
+			buildConfigurationList = ABE56E80163C77FA0068471B /* Build configuration list for PBXProject "CHDigitInputControl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ABE56E7B163C77FA0068471B;
+			productRefGroup = ABE56E87163C77FA0068471B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABE56E85163C77FA0068471B /* CHDigitInputControl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABE56E84163C77FA0068471B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE56E95163C77FA0068471B /* InfoPlist.strings in Resources */,
+				ABF48723163CBFE100CCC6E7 /* digitControlBG@2x.png in Resources */,
+				ABF48724163CBFE100CCC6E7 /* digitOverlay@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABE56E82163C77FA0068471B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE56E97163C77FA0068471B /* main.m in Sources */,
+				ABE56E9B163C77FA0068471B /* CHAppDelegate.m in Sources */,
+				ABE56EA3163C780E0068471B /* CHTestController.m in Sources */,
+				ABE56EA7163C78730068471B /* CHDigitInput.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ABE56E93163C77FA0068471B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABE56E94163C77FA0068471B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ABE56E9C163C77FA0068471B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ABE56E9D163C77FA0068471B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABE56E9F163C77FA0068471B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CHDigitInputControl/CHDigitInputControl-Prefix.pch";
+				INFOPLIST_FILE = "CHDigitInputControl/CHDigitInputControl-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ABE56EA0163C77FA0068471B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CHDigitInputControl/CHDigitInputControl-Prefix.pch";
+				INFOPLIST_FILE = "CHDigitInputControl/CHDigitInputControl-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABE56E80163C77FA0068471B /* Build configuration list for PBXProject "CHDigitInputControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE56E9C163C77FA0068471B /* Debug */,
+				ABE56E9D163C77FA0068471B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABE56E9E163C77FA0068471B /* Build configuration list for PBXNativeTarget "CHDigitInputControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE56E9F163C77FA0068471B /* Debug */,
+				ABE56EA0163C77FA0068471B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABE56E7D163C77FA0068471B /* Project object */;
+}
