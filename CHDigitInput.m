@@ -33,7 +33,7 @@
 -(void)setupDigitViews;
 -(void)highlightIndex:(NSInteger)indexToHighlight;
 -(void)unhighlightAll;
--(void)setText:(NSString *)text ForIndex:(NSInteger)index;
+-(BOOL)setText:(NSString *)text ForIndex:(NSInteger)index;
 
 
 @end
@@ -72,44 +72,27 @@
     self = [super init];
     
     if (self) {
-        
-        // setting a default background view
-        
-        _backgroundColor = kControlBackgroundColor;
-        _highlightedBackgroundColor = kControlHighlightedBackgroundColor;
-        
-
-        _backgroundView = [[UIView alloc] init];
-        _backgroundView.backgroundColor = _backgroundColor;
-        [self addSubview:_backgroundView];
-        
-        // creating the array that holds the digit views and the bg image views
-        
-        digitViews = [[NSMutableArray alloc] init];
-        bgImageViews = [[NSMutableArray alloc] init];
-        
-        // setting a dafault digitview appearance
-        
-        _digitViewHighlightedBackgroundColor = kDefaultHighlightedBackgroundColor;
-        _digitViewBackgroundColor = kDefaultNormalBackgroundColor;
-        
-        _digitViewHighlightedTextColor = kDefaultHighlightedTextColor;
-        _digitViewTextColor = kDefaultNormalTextColor;
-        
-        _digitViewShadowColor = kDefaultNormalShadowColor;
-        _digitViewShadowOffset = kDefaultNormalShadowOffset;
-        
-        _digitViewHighlightedShadowOffset = kDefaultHighlightedShadowOffset;
-        _digitViewHighlightedShadowColor = kDefaultHighlightedShadowColor;
-        
-        _digitViewFont = kDefaultFont;
-        
-        _matchNumberOfDigitsWithValueLength = NO;
-        
-        _placeHolderCharacter = kDefaultPlaceHolderCharacter;
-        
+        [self setup];
     }
     
+    return self;
+}
+
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setup];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self setup];
+    }
     return self;
 }
 
@@ -128,6 +111,44 @@
 -(void)redrawControl
 {
     [self setupDigitViews];
+}
+
+- (void)setup
+{
+    // setting a default background view
+    
+    _backgroundColor = kControlBackgroundColor;
+    _highlightedBackgroundColor = kControlHighlightedBackgroundColor;
+    
+    
+    _backgroundView = [[UIView alloc] init];
+    _backgroundView.backgroundColor = _backgroundColor;
+    [self addSubview:_backgroundView];
+    
+    // creating the array that holds the digit views and the bg image views
+    
+    digitViews = [[NSMutableArray alloc] init];
+    bgImageViews = [[NSMutableArray alloc] init];
+    
+    // setting a dafault digitview appearance
+    
+    _digitViewHighlightedBackgroundColor = kDefaultHighlightedBackgroundColor;
+    _digitViewBackgroundColor = kDefaultNormalBackgroundColor;
+    
+    _digitViewHighlightedTextColor = kDefaultHighlightedTextColor;
+    _digitViewTextColor = kDefaultNormalTextColor;
+    
+    _digitViewShadowColor = kDefaultNormalShadowColor;
+    _digitViewShadowOffset = kDefaultNormalShadowOffset;
+    
+    _digitViewHighlightedShadowOffset = kDefaultHighlightedShadowOffset;
+    _digitViewHighlightedShadowColor = kDefaultHighlightedShadowColor;
+    
+    _digitViewFont = kDefaultFont;
+    
+    _matchNumberOfDigitsWithValueLength = NO;
+    
+    _placeHolderCharacter = kDefaultPlaceHolderCharacter;
 }
 
 //////////////// Overriden property setters ///////////////////
@@ -334,8 +355,10 @@
 }
 
 // Set text for a given digitview index
--(void)setText:(NSString *)text ForIndex:(NSInteger)index
+-(BOOL)setText:(NSString *)text ForIndex:(NSInteger)index
 {
+    if (!isdigit([text characterAtIndex:0]))
+        return NO;
     
     UILabel *activeDigitView = [digitViews objectAtIndex:index];
     
@@ -358,10 +381,10 @@
     activeString = valueString;
     _value = [valueString integerValue];
     
-    
     [self sendActionsForControlEvents:UIControlEventEditingChanged];
     [self sendActionsForControlEvents:UIControlEventValueChanged];
- 
+    
+    return YES;
 }
 
 ////////////////// UIKeyInput Protocol implementation ///////////////////
@@ -374,25 +397,24 @@
     // set the entered text in the digit view
     // at the current index
     
-    [self setText:text ForIndex:currentIndex];
-    
-    // automatically jump to the next digit
-    
-    currentIndex++;
-    
-    // if currentindex is bigger than
-    // number of digitviews we assume
-    // that we are done with entering
-    // digits and are hiding the keyboard
-    
-    if (currentIndex >= _numberOfDigits) {
+    if ([self setText:text ForIndex:currentIndex]) {
+        // automatically jump to the next digit
         
-        [self resignFirstResponder];
-        return;
-    }
+        currentIndex++;
+        
+        // if currentindex is bigger than
+        // number of digitviews we assume
+        // that we are done with entering
+        // digits and are hiding the keyboard
+        
+        if (currentIndex >= _numberOfDigits) {
+            
+            [self resignFirstResponder];
+            return;
+        }
 
-    [self highlightIndex:currentIndex];
-    
+        [self highlightIndex:currentIndex];
+    }
 }
 
 // get called when keboard delete button is pressed
