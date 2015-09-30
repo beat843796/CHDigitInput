@@ -32,7 +32,7 @@ Create and configure the BubbleView in your ViewController
     [digitInput addTarget:self action:@selector(didEndEditing:) forControlEvents:UIControlEventEditingDidEnd];
 ```
 
-- You **must call redrawControl** when you change the appeareance of the control
+- You **must call redrawControl** when you change the appearance of the control
 
 ```objc
  	[digitInput redrawControl];
